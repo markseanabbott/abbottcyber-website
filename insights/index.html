@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insights — Abbott Cyber Consulting</title>
+<meta name="description" content="Security insights for hospitality operators and MSPs. Practical, direct — no vendor sponsored content.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<style>
+.post-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; margin-top:36px; }
+.post-card {
+  background:white; border:1px solid var(--border); border-radius:10px;
+  padding:28px; text-decoration:none; display:block;
+  transition:border-color .2s, transform .15s;
+}
+.post-card:hover { border-color:var(--cyan); transform:translateY(-2px); }
+.post-tag {
+  display:inline-block; font-size:9px; font-weight:500; letter-spacing:0.1em;
+  text-transform:uppercase; color:var(--cyan);
+  background:rgba(7,180,217,0.1); border:1px solid rgba(7,180,217,0.18);
+  padding:3px 9px; border-radius:3px; margin-bottom:14px;
+}
+.post-card h3 { font-family:'Inter',sans-serif; font-size:20px; font-weight:500; color:var(--navy); line-height:1.2; margin-bottom:10px; }
+.post-card p { font-size:13px; color:var(--muted); line-height:1.65; margin-bottom:16px; }
+.post-meta { font-size:11px; color:var(--muted); }
+.post-link { font-size:12px; font-weight:500; color:var(--cyan); display:inline-flex; align-items:center; gap:4px; }
+.post-link::after { content:'â†’'; }
+@media(max-width:700px){.post-grid{grid-template-columns:1fr}}
+
+/* Article styles */
+.article-hero { background:var(--navy); padding:72px 56px 64px; position:relative; overflow:hidden; }
+.article-hero-geo { position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,0.028) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.028) 1px,transparent 1px);background-size:56px 56px; }
+.article-hero-glow { position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 50% 80% at 90% 20%,rgba(7,180,217,0.12) 0%,transparent 55%); }
+.article-hero-inner { max-width:800px; margin:0 auto; position:relative; z-index:2; }
+.article-body { max-width:720px; margin:0 auto; }
+.article-body h2 { font-size:26px; color:var(--navy); margin:32px 0 12px; }
+.article-body p { font-size:15px; color:var(--muted); line-height:1.78; margin-bottom:16px; }
+.article-body ul { margin:0 0 16px 20px; }
+.article-body ul li { font-size:15px; color:var(--muted); line-height:1.72; margin-bottom:8px; }
+.article-body strong { color:var(--navy); }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <svg class="nav-logo-symbol" viewBox="0 0 106 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="53,2 100,90 6,90" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="3"/>
+        <polygon points="28,90 53,90 53,58" fill="#1E369B"/>
+        <polygon points="78,90 53,90 53,58" fill="#152168"/>
+        <polygon points="53,58 28,90 6,90 53,10" fill="#1E91C1" opacity="0.8"/>
+        <polygon points="53,58 78,90 100,90 53,10" fill="#07B4D9" opacity="0.9"/>
+        <rect x="47" y="10" width="12" height="48" fill="#1ECFD5" opacity="0.7"/>
+        <polygon points="53,2 42,22 64,22" fill="#07D1F2"/>
+      </svg>
+      <div class="nav-wordmark">Abbott Cyber Consulting<span>Prioritized risk approach</span></div>
+    </a>
+    <div class="nav-links">
+      <a href="../industries/index.html">Who we serve</a>
+      <a href="../virtual-ciso-1/index.html">Services</a>
+      <a href="../table-top-exercises/index.html">Solutions</a>
+      <a href="../about/index.html">About</a>
+      <a href="../contact/index.html" class="nav-cta">Book a call</a>
+    </div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-geo"></div>
+  <div class="page-hero-glow"></div>
+  <div class="page-hero-inner">
+    <div class="eyebrow">Insights</div>
+    <h1>Practical security perspectives — no vendor spin</h1>
+    <p class="page-hero-sub">Posts on security topics that matter to hospitality operators and MSPs. Focused on the practical, not the theoretical.</p>
+  </div>
+</section>
+
+<section class="content-sec">
+  <div class="content-inner">
+    <div class="post-grid">
+
+      <!-- POST 1 -->
+      <a href="#post-pci" class="post-card">
+        <div class="post-tag">Hospitality</div>
+        <h3>What hotels get wrong about PCI DSS scope</h3>
+        <p>Most hotel operators believe their PCI exposure is limited to the payment terminals at front desk. It rarely is. Here's what scope actually looks like in a typical hotel environment — and the assumptions that leave operators exposed.</p>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px">
+          <span class="post-meta">June 2026 · 6 min read</span>
+          <span class="post-link">Read</span>
+        </div>
+      </a>
+
+      <!-- POST 2 -->
+      <a href="#post-edr" class="post-card">
+        <div class="post-tag">MSP Partners</div>
+        <h3>Five questions MSPs should ask before recommending an EDR vendor</h3>
+        <p>The EDR market is crowded and vendor claims are often indistinguishable from each other. Before you standardize your stack on a platform, here are the five questions that tell you whether the product is actually good — or just well-marketed.</p>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px">
+          <span class="post-meta">June 2026 · 5 min read</span>
+          <span class="post-link">Read</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- POST 1 FULL TEXT -->
+<section class="content-sec bg-off" id="post-pci">
+  <div class="content-inner">
+    <div class="article-body">
+      <div class="post-tag">Hospitality</div>
+      <h2 style="font-size:32px;margin-top:8px">What hotels get wrong about PCI DSS scope</h2>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:28px">June 2026 · Mark Abbott</p>
+
+      <p>The most common thing I hear from hotel operators about PCI DSS is some version of: "We use a hosted payment page, so we're out of scope." It's not wrong, exactly. It's just incomplete in ways that create real exposure.</p>
+
+      <p>PCI scope is about every system that <strong>stores, processes, or transmits cardholder data</strong> — and every system that can affect the security of those systems. That second part is where most scope conversations end too early.</p>
+
+      <h2>The systems people forget about</h2>
+      <p>In a typical hotel environment, the PMS is the obvious starting point. But the PMS doesn't exist in isolation. It connects to:</p>
+      <ul>
+        <li>A payment gateway or processor — usually via an integration that IT didn't configure and doesn't fully understand</li>
+        <li>A channel manager or CRS — feeding reservation data including card authorization codes</li>
+        <li>A revenue management system — which may cache rate and availability data tied to booking records</li>
+        <li>A front-desk workstation — which is often on the same network segment as guest Wi-Fi</li>
+      </ul>
+      <p>Each of those connections potentially extends the cardholder data environment. If the systems that touch the CDE aren't segmented from the rest of the network — properly segmented, not just on a different VLAN that a motivated attacker can pivot across — then your scope is wider than your vendor told you.</p>
+
+      <h2>The self-assessment problem</h2>
+      <p>Most hotel operators complete a Self-Assessment Questionnaire each year. The SAQ is designed for organizations to self-certify compliance, and for many smaller operations that's appropriate. The problem is that the SAQ answers are only as accurate as the person completing it — and most of the people completing hotel SAQs are either the IT manager who set up the systems or the GM who just wants to get through the form.</p>
+      <p>Neither of those people typically has the PCI expertise to accurately scope the assessment. So the SAQ gets filed, compliance gets checked off, and the actual exposure doesn't change.</p>
+
+      <h2>What actually matters</h2>
+      <p>Three things reduce PCI risk meaningfully in hotel environments:</p>
+      <ul>
+        <li><strong>Accurate scoping</strong> — knowing what's actually in scope, confirmed by someone who understands how hotel technology actually works together</li>
+        <li><strong>Network segmentation that holds</strong> — not just documented, but tested. The segmentation between your guest Wi-Fi, your PMS, and your corporate network matters more than most of the controls on the SAQ</li>
+        <li><strong>Vendor access controls</strong> — your PMS vendor, your payment processor, your IT provider all have access to systems in or adjacent to your CDE. Are their credentials unique, rotated, and monitored? Usually not.</li>
+      </ul>
+      <p>PCI compliance is achievable and the cost of doing it right is significantly lower than the cost of a card data breach and the associated notification, remediation, and brand damage. But it requires an honest conversation about what's actually in scope — not a checkbox exercise.</p>
+
+      <p style="margin-top:24px"><a href="../hospitality/index.html" style="color:var(--cyan);font-weight:500">Learn more about hospitality security â†’</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- POST 2 FULL TEXT -->
+<section class="content-sec" id="post-edr">
+  <div class="content-inner">
+    <div class="article-body">
+      <div class="post-tag">MSP Partners</div>
+      <h2 style="font-size:32px;margin-top:8px">Five questions MSPs should ask before recommending an EDR vendor</h2>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:28px">June 2026 · Mark Abbott</p>
+
+      <p>The endpoint detection and response market has a vendor problem. Almost every EDR platform makes similar claims about detection rates, AI-powered threat intelligence, and MITRE ATT&amp;CK coverage. When everything sounds the same, it's hard to know what actually matters.</p>
+      <p>I've evaluated a lot of EDR platforms — for MSP stacks, for client environments, and during vendor-side work building a SOC. Here are the five questions that consistently separate the products worth standardizing on from the ones that are well-marketed but not well-engineered.</p>
+
+      <h2>1. What happens when the agent goes offline?</h2>
+      <p>This sounds basic. It's not. An agent that stops reporting because a client network dropped, a VM was paused, or a device was offline for two weeks creates a visibility gap that attackers exploit specifically. Ask the vendor: what's the detection and alerting behavior for offline agents? How long before an alert fires? Is that threshold configurable? You want answers, not a demo of what the product does when it's working.</p>
+
+      <h2>2. How does alert triage work for a multi-tenant MSP?</h2>
+      <p>MSPs live and die by their ability to manage alert volume across dozens of client environments. A product that produces 200 medium-severity alerts per day per client isn't a security tool — it's noise. Ask specifically about alert correlation, tuning capabilities, and what the false positive rate looks like in a real multi-tenant MSP deployment. References from MSPs at your scale matter here. Vendor-provided case studies don't.</p>
+
+      <h2>3. What does the rollback capability actually cover?</h2>
+      <p>Ransomware rollback has become a standard EDR marketing claim. What it actually covers varies significantly. Some platforms roll back file changes. Some roll back registry changes. Some only work on Windows. Some have limitations on file size, file count, or the time window covered. If ransomware protection is part of your pitch to clients — and it should be — you need to know exactly what the rollback covers and where it fails. Test it before you promise it.</p>
+
+      <h2>4. Can I see your independent test results — not your own?</h2>
+      <p>Every EDR vendor publishes their own efficacy data. The number that matters is third-party independent test results — SE Labs, AV-Comparatives, MITRE ATT&amp;CK evaluations. If a vendor is reluctant to point you to independent testing, that tells you something. If they lead with their own internal numbers, ask why they're not citing independent results. The good platforms have them.</p>
+
+      <h2>5. What's your support model when something is actively happening?</h2>
+      <p>This is the question that gets glossed over in vendor demos. When a client is actively compromised and you need to talk to someone who understands your environment and can help you make containment decisions — what does that actually look like? Is it a ticket queue? A 24/7 phone line? A dedicated account team? Test this before you need it. Call the support line at 9pm on a Friday with a hypothetical scenario and see who answers and what they know.</p>
+
+      <h2>The bottom line</h2>
+      <p>The right EDR for your MSP practice is the one your team can actually manage across your client environments — configured correctly, with alert tuning that produces actionable signal, and support that holds up when it matters. Margins matter, but the platform that pays off most is the one you're not emergency-replacing two years from now.</p>
+
+      <p style="margin-top:24px"><a href="../msp/index.html" style="color:var(--cyan);font-weight:500">Learn more about how we work with MSPs â†’</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-sec">
+  <div class="cta-glow"></div>
+  <div class="cta-inner">
+    <h2>Want to talk through something specific?</h2>
+    <p>These posts cover common scenarios. If your situation is more specific, a 30-minute call is a better use of your time.</p>
+    <div class="cta-btns">
+      <a href="../contact/index.html" class="btn-p">Book a 30-min call</a>
+      <a href="../about/index.html" class="btn-g">About Abbott Cyber</a>
+    </div>
+    <p class="cta-trust">Based in Langley, BC &nbsp;·&nbsp; Serving hospitality and MSPs across Canada</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <a href="../index.html" class="footer-brand">
+      <svg class="footer-brand-symbol" viewBox="0 0 106 101" fill="none">
+        <polygon points="53,2 100,90 6,90" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+        <polygon points="28,90 53,90 53,58" fill="#1E369B" opacity="0.7"/>
+        <polygon points="78,90 53,90 53,58" fill="#152168" opacity="0.7"/>
+        <polygon points="53,58 28,90 6,90 53,10" fill="#1E91C1" opacity="0.5"/>
+        <polygon points="53,58 78,90 100,90 53,10" fill="#07B4D9" opacity="0.5"/>
+        <rect x="47" y="10" width="12" height="48" fill="#1ECFD5" opacity="0.4"/>
+        <polygon points="53,2 42,22 64,22" fill="#07D1F2" opacity="0.5"/>
+      </svg>
+      <div class="footer-wordmark">Abbott Cyber Consulting</div>
+    </a>
+    <div class="footer-contact">
+      <a href="mailto:info@abbottcyber.com">info@abbottcyber.com</a><br>
+      <a href="tel:6043626028">(604) 362-6028</a><br>
+      8526 202B St Unit 302, Langley, BC V2Y 3L3
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
+

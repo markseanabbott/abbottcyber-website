@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Retail Security — Abbott Cyber Consulting</title>
+<meta name="description" content="Cybersecurity for retail operators. POS security, PCI DSS readiness, loyalty program PII protection, multi-location standards, and CCPA compliance.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <svg class="nav-logo-symbol" viewBox="0 0 106 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="53,2 100,90 6,90" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="3"/>
+        <polygon points="28,90 53,90 53,58" fill="#1E369B"/>
+        <polygon points="78,90 53,90 53,58" fill="#152168"/>
+        <polygon points="53,58 28,90 6,90 53,10" fill="#1E91C1" opacity="0.8"/>
+        <polygon points="53,58 78,90 100,90 53,10" fill="#07B4D9" opacity="0.9"/>
+        <rect x="47" y="10" width="12" height="48" fill="#1ECFD5" opacity="0.7"/>
+        <polygon points="53,2 42,22 64,22" fill="#07D1F2"/>
+      </svg>
+      <div class="nav-wordmark">Abbott Cyber Consulting<span>Prioritized risk approach</span></div>
+    </a>
+    <div class="nav-links">
+      <a href="../industries/index.html">Who we serve</a>
+      <a href="../virtual-ciso-1/index.html">Services</a>
+      <a href="../table-top-exercises/index.html">Solutions</a>
+      <a href="../about/index.html">About</a>
+      <a href="../contact/index.html" class="nav-cta">Book a call</a>
+    </div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-geo"></div>
+  <div class="page-hero-glow"></div>
+  <div class="page-hero-inner">
+    <div class="eyebrow">Retail Security</div>
+    <h1>Multi-location retail has a consistency problem attackers know how to exploit</h1>
+    <p class="page-hero-sub">Retailers collect payment card data, loyalty PII, and transaction records across dozens or hundreds of locations — each with its own technology, its own vendors, and its own level of security maturity. That inconsistency is the attack surface.</p>
+    <a href="../contact/index.html" class="btn-p">Talk about your retail environment</a>
+  </div>
+</section>
+
+<section class="content-sec">
+  <div class="content-inner">
+    <span class="eyebrow" style="color:var(--cyan)">Where retail gets hit</span>
+    <h2>The threat landscape for retail operators</h2>
+    <div class="svc-grid" style="margin-top:28px">
+      <div class="svc-card">
+        <div class="svc-icon">💳</div>
+        <h3>POS skimming and tampering</h3>
+        <p>Physical and logical attacks against point-of-sale systems remain among the most common retail incidents. Both in-store card readers and e-commerce payment flows are targets — often simultaneously in omnichannel environments.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🏆</div>
+        <h3>Loyalty program credential theft</h3>
+        <p>Loyalty accounts with stored value or reward points are targeted through credential stuffing — using breached username/password combinations from other platforms to access your loyalty system. Large programs with high-value balances are primary targets.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🔌</div>
+        <h3>Third-party integration risk</h3>
+        <p>E-commerce platforms, logistics providers, payment processors, and inventory management systems all have access to your transaction data. Each integration is a potential entry point — and most don't have security obligations written into the vendor contract.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🗺</div>
+        <h3>Inconsistent controls across locations</h3>
+        <p>When each location has been set up differently — different POS configurations, different network arrangements, different staff practices — attackers identify the weakest property and use it as the entry point for broader lateral movement.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🛒</div>
+        <h3>E-commerce platform exposure</h3>
+        <p>Online stores on Shopify, WooCommerce, or custom platforms introduce web application risk — skimming scripts, insecure plugins, administrative credential theft, and transaction data exposure in transit or at rest.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">📧</div>
+        <h3>Business email compromise</h3>
+        <p>Retail finance and operations teams are targeted for fraudulent wire transfers and vendor payment redirection. Multi-location structures often mean less oversight of individual transaction approvals, increasing exposure.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-sec bg-off">
+  <div class="content-inner">
+    <span class="eyebrow" style="color:var(--cyan)">Compliance context</span>
+    <h2>The regulatory and contractual obligations retailers carry</h2>
+    <div class="two-col" style="margin-top:24px">
+      <div>
+        <p>Retail compliance obligations are layered — PCI DSS from payment brands, state and provincial privacy laws from where you operate, and sector-specific breach notification requirements that activate at different thresholds depending on jurisdiction.</p>
+        <p>Most multi-location retailers have PCI obligations they've partially addressed but not fully validated. Scope assumptions that made sense when the business was smaller often don't hold as e-commerce, loyalty programs, and third-party integrations expand the cardholder data environment in ways that weren't reviewed.</p>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon">💳</div>
+          <div>
+            <strong>PCI DSS</strong>
+            <span>Payment card data is the primary compliance driver. Scope validation, network segmentation review, and SAQ accuracy are the three areas where most retailers have unresolved gaps.</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-icon">🌎</div>
+          <div>
+            <strong>CCPA &amp; state privacy laws</strong>
+            <span>California, Colorado, Virginia, and other states have consumer data privacy requirements with breach notification timelines and consumer rights obligations. If you sell to US residents, these apply to you regardless of where you're incorporated.</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-icon">🍁</div>
+          <div>
+            <strong>PIPEDA &amp; Bill C-27</strong>
+            <span>Canadian privacy legislation for customer data collected across your locations. Breach notification to the Privacy Commissioner and affected individuals is required at a specific risk threshold.</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔒</div>
+          <div>
+            <strong>Cyber insurance</strong>
+            <span>Underwriters are tightening retail-specific requirements around POS security, multi-factor authentication, and network segmentation. Pre-renewal readiness review prevents gaps from affecting coverage.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-sec">
+  <div class="content-inner">
+    <span class="eyebrow" style="color:var(--cyan)">What the work looks like</span>
+    <h2>Services scoped to retail environments</h2>
+    <div class="two-col" style="margin-top:24px">
+      <ul class="feature-list">
+        <li>PCI DSS scope validation and gap analysis</li>
+        <li>POS security review and configuration hardening</li>
+        <li>Loyalty program security assessment</li>
+        <li>Third-party vendor risk assessment and contract review</li>
+        <li>Multi-location security standards development</li>
+        <li>E-commerce platform security review</li>
+        <li>CCPA and provincial privacy program development</li>
+        <li>Network segmentation review across locations</li>
+        <li>Incident response planning for retail scenarios</li>
+        <li>Cyber insurance readiness review</li>
+      </ul>
+      <div>
+        <p>Most retail security engagements start with a gap analysis — understanding where the real exposure sits before recommending any controls. The output is a prioritized remediation plan, not a generic framework report.</p>
+        <p>Ongoing vCISO support is available for retailers who need continuing security leadership — managing the program, overseeing vendor accountability, and providing executive reporting across locations.</p>
+        <a href="../contact/index.html" class="btn-p" style="margin-top:8px">Talk about your situation</a>
+        <a href="../assessments/index.html" class="btn-g" style="margin-top:8px;display:block;margin-left:0;width:fit-content">See assessment options</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-sec">
+  <div class="cta-glow"></div>
+  <div class="cta-inner">
+    <h2>Find out where the real exposure is</h2>
+    <p>A 30-minute conversation about your retail environment — locations, technology stack, current compliance status, and what's keeping you up at night.</p>
+    <div class="cta-btns">
+      <a href="../contact/index.html" class="btn-p">Book a 30-min call</a>
+      <a href="../grc/index.html" class="btn-g">GRC &amp; compliance</a>
+    </div>
+    <p class="cta-trust">Based in Langley, BC &nbsp;·&nbsp; Serving retail operators across Canada and the US</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <a href="../index.html" class="footer-brand">
+      <svg class="footer-brand-symbol" viewBox="0 0 106 101" fill="none">
+        <polygon points="53,2 100,90 6,90" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+        <polygon points="28,90 53,90 53,58" fill="#1E369B" opacity="0.7"/>
+        <polygon points="78,90 53,90 53,58" fill="#152168" opacity="0.7"/>
+        <polygon points="53,58 28,90 6,90 53,10" fill="#1E91C1" opacity="0.5"/>
+        <polygon points="53,58 78,90 100,90 53,10" fill="#07B4D9" opacity="0.5"/>
+        <rect x="47" y="10" width="12" height="48" fill="#1ECFD5" opacity="0.4"/>
+        <polygon points="53,2 42,22 64,22" fill="#07D1F2" opacity="0.5"/>
+      </svg>
+      <div class="footer-wordmark">Abbott Cyber Consulting</div>
+    </a>
+    <div class="footer-contact">
+      <a href="mailto:info@abbottcyber.com">info@abbottcyber.com</a><br>
+      <a href="tel:6043626028">(604) 362-6028</a><br>
+      8526 202B St Unit 302, Langley, BC V2Y 3L3
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
