@@ -7,3 +7,10 @@ CLAUDE.md
 abbottcyber_homepage_mockup.html
 cutsheets/
 Cutsheets/
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
