@@ -10,21 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../styles.css">
 <style>
-.contact-layout { display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start; max-width:1100px; margin:0 auto; }
-.contact-form { display:flex; flex-direction:column; gap:16px; }
-.form-group { display:flex; flex-direction:column; gap:6px; }
-.form-group label { font-size:12px; font-weight:500; color:var(--navy); letter-spacing:0.04em; text-transform:uppercase; }
-.form-group input, .form-group select, .form-group textarea {
-  font-family:'Inter',sans-serif; font-size:14px; color:var(--text);
-  border:1px solid rgba(21,33,104,0.2); border-radius:6px;
-  padding:11px 14px; background:white; width:100%;
-  transition:border-color .2s; outline:none;
-}
-.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color:var(--cyan); }
-.form-group textarea { resize:vertical; min-height:120px; }
-.form-submit { background:var(--cyan); color:var(--navy); font-weight:600; font-size:14px; padding:13px 28px; border:none; border-radius:4px; cursor:pointer; transition:background .2s; text-align:center; }
-.form-submit:hover { background:var(--cyan-l); }
-@media(max-width:800px){.contact-layout{grid-template-columns:1fr}}
+.contact-center { max-width:620px; margin:0 auto; }
 </style>
 </head>
 <body>
@@ -49,7 +35,8 @@
       <a href="../projects/index.html">Projects</a>
       <a href="../insights/index.html">Insights</a>
       <a href="../about/index.html">About</a>
-      <a href="../contact/index.html" class="nav-cta">Book a call</a>
+      <a href="../contact/index.html">Contact</a>
+      <a href="https://app.usemotion.com/meet/mark-abbott/y85l95p" target="_blank" rel="noopener" class="nav-cta">Book a call</a>
     </div>
   </div>
 </nav>
@@ -66,66 +53,33 @@
 </section>
 
 <section class="content-sec">
-  <div class="contact-layout">
-    <div>
-      <span class="eyebrow" style="color:var(--cyan)">What to expect</span>
-      <h2>A useful 30 minutes</h2>
-      <p>The first conversation is a scoping call  -  not a sales call. Bring your questions, your concerns, or just a description of your situation. We'll figure out together whether there's a fit and what the right next step looks like.</p>
-      <p>If there's no fit, we'll tell you that too. The goal is to give you a useful conversation, not to schedule a follow-up.</p>
-      <div class="cards" style="margin-top:28px">
-        <div class="card" style="border-left:3px solid var(--cyan)">
-          <div class="card-icon">📅</div>
-          <div>
-            <strong><a href="https://app.usemotion.com/meet/mark-abbott/y85l95p" target="_blank" rel="noopener" style="color:var(--navy);text-decoration:none">Book a time directly →</a></strong>
-            <span>Pick a time that works — connects to Mark's live calendar. Fastest way to get on the schedule.</span>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-icon">📧</div>
-          <div>
-            <strong><a href="mailto:info@abbottcyber.com" style="color:var(--navy);text-decoration:none">info@abbottcyber.com</a></strong>
-            <span>Email works too. Responses within one business day.</span>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-icon">📍</div>
-          <div>
-            <strong>Langley, BC</strong>
-            <span>8526 202B St Unit 302, Langley, BC V2Y 3L3. Serving clients across Canada and the US.</span>
-          </div>
+  <div class="contact-center">
+    <span class="eyebrow" style="color:var(--cyan)">What to expect</span>
+    <h2>A useful 30 minutes</h2>
+    <p>The first conversation is a scoping call  -  not a sales call. Bring your questions, your concerns, or just a description of your situation. We'll figure out together whether there's a fit and what the right next step looks like.</p>
+    <p>If there's no fit, we'll tell you that too. The goal is to give you a useful conversation, not to schedule a follow-up.</p>
+    <div class="cards" style="margin-top:28px">
+      <div class="card" style="border-left:3px solid var(--cyan)">
+        <div class="card-icon">📅</div>
+        <div>
+          <strong><a href="https://app.usemotion.com/meet/mark-abbott/y85l95p" target="_blank" rel="noopener" style="color:var(--navy);text-decoration:none">Book a time directly →</a></strong>
+          <span>Pick a time that works  -  connects to Mark's live calendar. Fastest way to get on the schedule.</span>
         </div>
       </div>
-    </div>
-    <div>
-      <form class="contact-form" name="contact" method="POST" action="https://formspree.io/f/xeewpeoy">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Your name" required>
+      <div class="card">
+        <div class="card-icon">📧</div>
+        <div>
+          <strong><a href="mailto:info@abbottcyber.com" style="color:var(--navy);text-decoration:none">info@abbottcyber.com</a></strong>
+          <span>Email works too. Responses within one business day.</span>
         </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="you@yourcompany.com" required>
+      </div>
+      <div class="card">
+        <div class="card-icon">📍</div>
+        <div>
+          <strong>Langley, BC</strong>
+          <span>8526 202B St Unit 302, Langley, BC V2Y 3L3. Serving clients across Canada and the US.</span>
         </div>
-        <div class="form-group">
-          <label for="org">Organization</label>
-          <input type="text" id="org" name="org" placeholder="Company name">
-        </div>
-        <div class="form-group">
-          <label for="type">What best describes your organization?</label>
-          <select id="type" name="type">
-            <option value="">Select one</option>
-            <option value="hotel">Hotel or hospitality operator</option>
-            <option value="msp">Managed service provider (MSP)</option>
-            <option value="other">Other business</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="message">What are you dealing with?</label>
-          <textarea id="message" name="message" placeholder="A brief description of your situation or what you're trying to accomplish  -  or just say hello."></textarea>
-        </div>
-        <button type="submit" class="form-submit">Send message →</button>
-        <p style="font-size:11px;color:var(--muted);margin-top:4px">We'll respond within one business day.</p>
-      </form>
+      </div>
     </div>
   </div>
 </section>
