@@ -1,30 +1,59 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Who We Serve  -  Abbott Cyber Consulting</title>
-<meta name="description" content="Abbott Cyber Consulting works with hospitality operators, MSPs, healthcare organizations, and manufacturers. Sector-specific security leadership without the full-time CISO cost.">
+<meta name="description" content="Security leadership for multi-site operators and MSP partners. Two buyer types, one risk-based approach  -  built from 25 years inside the environments you're running.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../styles.css">
 <style>
-.industry-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; margin-top:36px; }
-.industry-card {
-  background:white; border:1px solid var(--border); border-radius:10px;
-  padding:32px; text-decoration:none; display:block; position:relative;
-  transition:border-color .2s, transform .15s, box-shadow .15s;
+.buyer-section {
+  border-top: 3px solid var(--cyan);
+  padding-top: 36px;
+  margin-bottom: 56px;
 }
-.industry-card:hover { border-color:var(--cyan); transform:translateY(-3px); box-shadow:0 8px 32px rgba(7,180,217,0.08); }
-.industry-card-eyebrow { font-size:10px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--cyan); margin-bottom:10px; }
-.industry-card h3 { font-family:'Inter',sans-serif; font-size:22px; font-weight:500; color:var(--navy); margin-bottom:10px; }
-.industry-card p { font-size:13px; color:var(--muted); line-height:1.65; margin-bottom:18px; }
-.industry-card ul { margin:0 0 18px 16px; }
-.industry-card ul li { font-size:12px; color:var(--muted); line-height:1.65; margin-bottom:4px; }
-.industry-card-link { font-size:12px; font-weight:500; color:var(--cyan); display:inline-flex; align-items:center; gap:4px; }
-.industry-card-link::after { content:'→'; }
-@media(max-width:700px){.industry-grid{grid-template-columns:1fr}}
+.buyer-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  margin-bottom: 12px;
+}
+.buyer-list {
+  margin: 20px 0 24px 0;
+  padding: 0;
+  list-style: none;
+}
+.buyer-list li {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.65;
+  padding: 6px 0 6px 20px;
+  position: relative;
+  border-bottom: 1px solid var(--border);
+}
+.buyer-list li:last-child { border-bottom: none; }
+.buyer-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--cyan);
+  font-size: 11px;
+}
+.buyer-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--cyan);
+  text-decoration: none;
+}
+.buyer-cta:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
@@ -59,110 +88,77 @@
   <div class="page-hero-glow"></div>
   <div class="page-hero-inner">
     <div class="eyebrow">Who We Serve</div>
-    <h1>Industry-specific security  -  not a generic framework applied everywhere</h1>
-    <p class="page-hero-sub">The threat landscape, regulatory requirements, and operational realities look different depending on what your business does. Abbott Cyber Consulting works across sectors where that specificity matters  -  bringing experience built inside those environments, not adapted from somewhere else.</p>
+    <h1>Two types of organizations.<br>One approach.</h1>
+    <p class="page-hero-sub">Security leadership built for how your business actually operates  -  whether you're running multiple locations or building a security practice for your clients.</p>
   </div>
 </section>
 
 <section class="content-sec">
   <div class="content-inner">
-    <div class="industry-grid">
 
-      <a href="../hospitality/index.html" class="industry-card">
-        <div class="industry-card-eyebrow">Hotels · Restaurants · Franchises · Multi-unit Operators</div>
-        <h3>Hospitality &amp; Food Service</h3>
-        <p>Data-rich environments running on technology that wasn't designed with security in mind. PMS, POS, OTA integrations, loyalty programs, and franchise tech stacks all create exposure  -  across every location, simultaneously. Franchise and complex ownership models add accountability gaps that generic consultants don't know to look for.</p>
-        <ul>
-          <li>PCI DSS readiness and scope validation</li>
-          <li>M&amp;A due diligence for acquisitions</li>
-          <li>Brand and franchise standard alignment</li>
-          <li>Distributed and multi-unit security programs</li>
-          <li>Hotel tech design and scoping for new builds</li>
-          <li>Incident response with hospitality context</li>
-        </ul>
-        <span class="industry-card-link">Hospitality security</span>
-      </a>
-
-      <a href="../msp/index.html" class="industry-card">
-        <div class="industry-card-eyebrow">Managed Service Providers</div>
-        <h3>MSP Partners</h3>
-        <p>Your clients' security posture is a direct reflection on your practice. Whether you need white-label vCISO delivery, tooling advisory, or help winning larger accounts, Abbott Cyber works behind your brand.</p>
-        <ul>
-          <li>White-label vCISO under your brand</li>
-          <li>Security tooling stack advisory</li>
-          <li>Multi-tenant risk management</li>
-          <li>Compliance support for your clients</li>
-          <li>Technical sales enablement collateral</li>
-          <li>Sales architect for client-facing conversations</li>
-        </ul>
-        <span class="industry-card-link">MSP partnership</span>
-      </a>
-
-      <a href="../healthcare/index.html" class="industry-card">
-        <div class="industry-card-eyebrow">Providers · Clinics · Health Tech</div>
-        <h3>Healthcare</h3>
-        <p>PHI protection under HIPAA requires documented risk analysis, not just good intentions. Ransomware attacks on healthcare are among the most operationally damaging incidents  -  and OCR investigations don't wait for you to get organized.</p>
-        <ul>
-          <li>HIPAA risk analysis and program development</li>
-          <li>EHR and telehealth platform security</li>
-          <li>Ransomware readiness and response</li>
-          <li>OCR audit-ready documentation</li>
-          <li>Business associate agreement oversight</li>
-        </ul>
-        <span class="industry-card-link">Healthcare security</span>
-      </a>
-
-      <a href="../manufacturing/index.html" class="industry-card">
-        <div class="industry-card-eyebrow">Industrial Operations · Defense Supply Chain</div>
-        <h3>Manufacturing &amp; Construction</h3>
-        <p>OT/ICS environments are increasingly targeted. IT/OT convergence brings IT-world vulnerabilities into production environments that weren't built to handle them  -  and CMMC readiness is now a requirement for any organization in or entering the DoD supply chain.</p>
-        <ul>
-          <li>OT/ICS security advisory (PLCs, SCADA)</li>
-          <li>CMMC Level 1 &amp; 2 readiness</li>
-          <li>IT/OT network segmentation review</li>
-          <li>Subcontractor and vendor access risk</li>
-          <li>DoD supply chain security compliance</li>
-        </ul>
-        <span class="industry-card-link">Manufacturing security</span>
-      </a>
-
+    <!-- B2C: MULTI-SITE OPERATORS -->
+    <div class="buyer-section">
+      <div class="buyer-label">Multi-Site Operators</div>
+      <div class="two-col">
+        <div>
+          <h2>Complex environments. No dedicated security team. Real risk.</h2>
+          <p>You're running distributed locations  -  hotels, restaurants, retail, franchises  -  with IT infrastructure spread across properties, a web of third-party vendors and integrations, and security ownership that falls to whoever has time. You're not small enough to ignore the risk and not large enough to have a CISO.</p>
+          <p>The challenge isn't that you don't care about security. It's that the people responsible for it weren't hired to do it, and the consultants you've talked to don't understand how your environments actually work.</p>
+          <p>Abbott Cyber's depth is here. 25+ years building and running security programs inside hospitality, retail, and multi-unit franchise environments  -  at scale, across complex ownership structures, through M&amp;A. The experience isn't adapted from somewhere else.</p>
+          <a href="../hospitality/index.html" class="buyer-cta" style="margin-top:16px;display:inline-flex">Hospitality security depth &rarr;</a>
+        </div>
+        <div>
+          <p style="font-size:12px;font-weight:600;color:var(--navy);margin-bottom:4px">What this looks like</p>
+          <ul class="buyer-list">
+            <li>Risk assessments scoped to distributed, multi-location environments</li>
+            <li>PCI DSS scope validation for organizations processing payments across properties</li>
+            <li>Vendor and integration risk management (PMS, POS, OTA, channel managers)</li>
+            <li>Franchisor and brand standard compliance alignment</li>
+            <li>vCISO retainer for ongoing security leadership</li>
+            <li>M&amp;A due diligence for acquisitions</li>
+            <li>Physical and network design scoping for new builds and renovations</li>
+          </ul>
+        </div>
+      </div>
     </div>
+
+    <!-- B2B: MSP PARTNERS -->
+    <div class="buyer-section">
+      <div class="buyer-label">MSP Partners</div>
+      <div class="two-col">
+        <div>
+          <h2>Security depth under your brand. CISO-level credibility for your clients.</h2>
+          <p>Your clients are asking harder security questions. Their insurers are too. You don't need to build a full security practice  -  you need a CISO-level voice you can bring into client conversations, white-label, and trust.</p>
+          <p>Abbott Cyber works behind your brand. Assessments, vCISO delivery, compliance prep, tooling advisory  -  delivered to your clients as part of your service offering, without the headcount.</p>
+          <a href="../msp/index.html" class="buyer-cta" style="margin-top:16px;display:inline-flex">MSP partnership details &rarr;</a>
+        </div>
+        <div>
+          <p style="font-size:12px;font-weight:600;color:var(--navy);margin-bottom:4px">What this looks like</p>
+          <ul class="buyer-list">
+            <li>White-label vCISO under your brand</li>
+            <li>Security tooling stack advisory  -  vendor-neutral, no vendor margins involved</li>
+            <li>Compliance and cyber insurance support for your clients</li>
+            <li>Technical sales enablement collateral</li>
+            <li>CISO-level presence for client-facing conversations and QBRs</li>
+            <li>Incident response support for compromised client environments</li>
+            <li>CISO selection and hiring support</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<section class="content-sec bg-off">
-  <div class="content-inner">
-    <div class="two-col">
-      <div>
-        <span class="eyebrow" style="color:var(--cyan)">The common thread</span>
-        <h2>What every sector has in common</h2>
-        <p>Regardless of industry, the organizations Abbott Cyber works with share a pattern: they've grown past the point where IT alone can own security, but they're not large enough to justify a full-time CISO. The gap between the two is exactly where a vCISO delivers the most value.</p>
-        <p>The regulatory landscape differs. The threat actors differ. The technology environments differ. But the need for executive-level security leadership  -  someone who can own the program, drive the roadmap, and translate risk into terms a board or ownership group can act on  -  is consistent across all of them.</p>
-        <a href="../virtual-ciso/index.html" class="btn-p" style="margin-top:8px">See how vCISO works</a>
-      </div>
-      <div class="cards">
-        <div class="card">
-          <div class="card-icon">🎯</div>
-          <div>
-            <strong>Risk-based, not checkbox</strong>
-            <span>Every engagement starts with understanding what the real risks are for your specific environment  -  not applying a generic framework template.</span>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-icon">📐</div>
-          <div>
-            <strong>Right-sized for your scale</strong>
-            <span>Whether you're a 5-location operator or a 200-property chain, the engagement model flexes to match your size, complexity, and budget.</span>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-icon">🤝</div>
-          <div>
-            <strong>Practical, not theoretical</strong>
-            <span>Recommendations that account for your operational reality  -  what your staff can actually implement and what your budget can actually support.</span>
-          </div>
-        </div>
-      </div>
+<!-- COMMON THREAD -->
+<section class="content-sec bg-navy">
+  <div class="content-inner" style="max-width:740px;margin:0 auto;text-align:center">
+    <span class="eyebrow" style="color:var(--cyan)">The same gap, across both</span>
+    <h2 style="color:white">Security ownership without security leadership.</h2>
+    <p style="color:rgba(255,255,255,0.62);max-width:100%">Both buyer types share the same underlying problem: whether that's a multi-unit operator that's outgrown IT-managed risk, or an MSP whose clients are asking questions the team can't answer at a CISO level  -  the gap is the same. A fractional security leader who understands your environment, owns the program, and can translate risk into terms that leadership can act on.</p>
+    <div class="btn-row" style="justify-content:center;margin-top:28px">
+      <a href="../contact/index.html" class="btn-p">Book a 30-min call</a>
+      <a href="../virtual-ciso/index.html" class="btn-g">See how vCISO works</a>
     </div>
   </div>
 </section>
@@ -174,7 +170,7 @@
     <p>A 30-minute conversation is the fastest way to figure out whether there's a fit and what that looks like for your specific situation.</p>
     <div class="cta-btns">
       <a href="../contact/index.html" class="btn-p">Book a 30-min call</a>
-      <a href="../virtual-ciso/index.html" class="btn-g">See all services</a>
+      <a href="../virtual-ciso/index.html" class="btn-g">See vCISO services</a>
     </div>
     <p class="cta-trust">Based in Langley, BC &nbsp;·&nbsp; Serving clients across Canada</p>
   </div>
