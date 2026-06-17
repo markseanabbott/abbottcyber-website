@@ -9,6 +9,38 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../styles.css">
+<style>
+.engage-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:28px; }
+.flip-card { perspective:1000px; height:220px; }
+.flip-card-inner {
+  position:relative; width:100%; height:100%;
+  transition:transform 0.45s ease; transform-style:preserve-3d;
+}
+.flip-card:hover .flip-card-inner { transform:rotateY(180deg); }
+.flip-card-front, .flip-card-back {
+  position:absolute; width:100%; height:100%;
+  backface-visibility:hidden; -webkit-backface-visibility:hidden;
+  border-radius:10px; padding:24px; box-sizing:border-box;
+}
+.flip-card-front {
+  background:white; border:1px solid var(--border);
+  display:flex; flex-direction:column; gap:10px;
+}
+.flip-card-front .svc-icon { font-size:22px; }
+.flip-card-front h3 { font-size:15px; font-weight:600; color:var(--navy); margin:0; }
+.flip-card-front p { font-size:12.5px; color:var(--muted); line-height:1.55; margin:0; }
+.flip-card-front .hint { font-size:11px; color:var(--cyan); font-weight:500; margin-top:auto; }
+.flip-card-back {
+  background:var(--navy); color:white;
+  transform:rotateY(180deg);
+  display:flex; flex-direction:column; justify-content:center; gap:10px;
+}
+.flip-card-back h4 { font-size:13px; font-weight:600; color:var(--cyan); margin:0; }
+.flip-card-back p { font-size:12px; color:rgba(255,255,255,0.72); line-height:1.6; margin:0; }
+.flip-card-back a { font-size:12px; font-weight:500; color:var(--cyan); text-decoration:none; margin-top:auto; display:inline-block; }
+.flip-card-back a:hover { text-decoration:underline; }
+@media(max-width:700px){ .engage-grid { grid-template-columns:1fr; } .flip-card { height:auto; min-height:180px; } }
+</style>
 </head>
 <body>
 
@@ -93,25 +125,54 @@
     <span class="eyebrow" style="color:var(--cyan)">Engagement models</span>
     <h2>Retainer or project  -  your call</h2>
     <p style="max-width:680px">Most engagements run as a monthly hour allotment  -  typically 5 to 10 hours  -  providing consistent strategic oversight without a full-time hire. Project-based work is available for defined-scope initiatives: assessments, compliance readiness, framework builds, AI governance, or M&amp;A due diligence.</p>
-    <div class="svc-grid" style="margin-top:28px">
-      <div class="svc-card">
-        <div class="svc-icon">📅</div>
-        <h3>Monthly retainer</h3>
-        <p>Ongoing oversight, regular check-ins, policy and governance work, incident response availability. Best for organizations that need consistent security leadership.</p>
-        <span class="svc-link">Most common</span>
+    <div class="engage-grid">
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="svc-icon">📅</div>
+            <h3>Monthly retainer</h3>
+            <p>Ongoing oversight, regular check-ins, policy and governance work, incident response availability.</p>
+            <span class="hint">Hover for details</span>
+          </div>
+          <div class="flip-card-back">
+            <h4>Monthly retainer</h4>
+            <p>Typically 5 to 10 hours per month at a fixed fee. Ongoing strategic oversight, policy and governance work, board reporting, and incident response availability. Most clients start with a 3-month commitment. The most common engagement model.</p>
+          </div>
+        </div>
       </div>
-      <div class="svc-card">
-        <div class="svc-icon">📦</div>
-        <h3>Project-based</h3>
-        <p>Defined scope, defined deliverable. Fixed timeline, clear output. Used for assessments, compliance builds, AI governance programs, and due diligence.</p>
-        <span class="svc-link">Good for specific initiatives</span>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="svc-icon">📦</div>
+            <h3>Project-based</h3>
+            <p>Defined scope, defined deliverable. Fixed timeline, clear output. Used for assessments, compliance builds, and AI governance programs.</p>
+            <span class="hint">Hover for details</span>
+          </div>
+          <div class="flip-card-back">
+            <h4>Project-based</h4>
+            <p>Fixed scope and deliverable: a risk assessment, compliance gap analysis, AI governance program, or M&amp;A due diligence review. Clear timeline, defined output, priced per project. Good for organizations with a specific gap to close rather than ongoing advisory needs.</p>
+          </div>
+        </div>
       </div>
-      <div class="svc-card">
-        <div class="svc-icon">🤝</div>
-        <h3>MSP white-label</h3>
-        <p>vCISO services and AI governance programs delivered under your brand to your clients. CISO-level credibility without building the practice in-house.</p>
-        <a href="../msp/index.html" class="svc-link">MSP partner overview</a>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="svc-icon">🤝</div>
+            <h3>MSP white-label</h3>
+            <p>vCISO services and AI governance programs delivered under your brand to your clients.</p>
+            <span class="hint">Hover for details</span>
+          </div>
+          <div class="flip-card-back">
+            <h4>MSP white-label</h4>
+            <p>Security advisory delivered under your brand to your clients. You stay primary. Abbott provides the CISO-level depth. Priced per client or as a block of hours. Includes sales architect support  -  active participation in client-facing conversations when a senior security voice makes the difference.</p>
+            <a href="../msp/index.html">MSP partner overview &rarr;</a>
+          </div>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
