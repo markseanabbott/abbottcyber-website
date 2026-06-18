@@ -149,6 +149,26 @@
   </div>
 </footer>
 
+<script>
+(function(){
+  var links = document.querySelector('.nav-links');
+  var btn = document.createElement('button');
+  btn.className = 'nav-hamburger';
+  btn.setAttribute('aria-label', 'Toggle menu');
+  btn.innerHTML = '<span></span><span></span><span></span>';
+  links.parentNode.insertBefore(btn, links);
+  btn.addEventListener('click', function(){
+    links.classList.toggle('open');
+    btn.classList.toggle('open');
+  });
+  document.addEventListener('click', function(e){
+    if (!e.target.closest('nav')) {
+      links.classList.remove('open');
+      btn.classList.remove('open');
+    }
+  });
+})();
+</script>
 </body>
 </html>
 

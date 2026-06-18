@@ -442,12 +442,38 @@ footer { background: var(--navy-deep); padding: 32px 56px; border-top: 1px solid
   -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 13'%3E%3Cpath d='M2 6.5l3 3L11 3' stroke='white' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;
 }
 
+/* ── Mobile nav hamburger button (hidden on desktop) ── */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  padding: 6px 4px;
+  background: none;
+  border: none;
+  flex-shrink: 0;
+}
+.nav-hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: rgba(255,255,255,0.8);
+  border-radius: 2px;
+  transition: transform 0.22s ease, opacity 0.22s ease;
+}
+.nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
 /* ══════════════════════════════════════
    RESPONSIVE
    ══════════════════════════════════════ */
+
+/* ── Tablet (960px) ── */
 @media (max-width: 960px) {
   nav { padding: 0 24px; }
-  .nav-links { gap: 18px; }
+  .nav-links { gap: 16px; }
 
   .hero { padding: 60px 24px 52px; min-height: auto; }
   .hero-inner { grid-template-columns: 1fr; gap: 36px; }
@@ -481,11 +507,95 @@ footer { background: var(--navy-deep); padding: 32px 56px; border-top: 1px solid
   .two-col { grid-template-columns: 1fr; gap: 36px; }
 }
 
-@media (max-width: 600px) {
-  .svc-grid { grid-template-columns: 1fr; }
-  .sol-grid { grid-template-columns: 1fr; }
-  .stat-grid { grid-template-columns: 1fr; }
+/* ── Mobile (768px) — nav collapses, primary layout ── */
+@media (max-width: 768px) {
+  /* NAV */
+  nav { height: 60px; padding: 0 20px; }
+  .nav-inner { position: relative; }
+  .nav-hamburger { display: flex; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: -20px; right: -20px;
+    flex-direction: column;
+    background: var(--navy-deep);
+    padding: 4px 20px 20px;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+    gap: 0;
+    z-index: 200;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a {
+    padding: 13px 0;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .nav-links a:last-child { border-bottom: none; }
+  /* Book a call pill becomes a plain text link in the dropdown */
+  .nav-cta {
+    background: none !important;
+    color: var(--cyan) !important;
+    padding: 13px 0 !important;
+    border-radius: 0 !important;
+    font-size: 15px !important;
+  }
+
+  /* HERO */
+  .hero { padding: 44px 20px 40px; }
+  h1 { font-size: 30px; }
+  .hero-sub { font-size: 15px; max-width: 100%; }
+  .btn-row { flex-direction: column; gap: 10px; }
+  .btn-p, .btn-g { text-align: center; display: block; }
+
+  /* PAGE HERO */
+  .page-hero { padding: 40px 20px 36px; }
+  .page-hero h1 { font-size: 28px; max-width: 100%; }
+  .page-hero-sub { font-size: 15px; max-width: 100%; margin-bottom: 22px; }
+
+  /* HEADINGS */
+  h2 { font-size: 26px; }
+  .content-inner h2 { font-size: 26px; }
+  .cta-inner h2 { font-size: 26px; }
+
+  /* CONTENT SECTIONS */
+  .content-sec { padding: 40px 20px; }
+  .two-col { grid-template-columns: 1fr !important; gap: 28px; }
+
+  /* GRIDS — !important overrides inline style="" attributes */
+  .svc-grid { grid-template-columns: 1fr !important; }
+  .sol-grid { grid-template-columns: 1fr 1fr; }
+
+  /* HOMEPAGE SECTIONS */
+  .hero { padding: 44px 20px 40px; min-height: auto; }
+  .hero-inner { grid-template-columns: 1fr; gap: 28px; }
+  .diagnosis { padding: 44px 20px; }
+  .diag-inner { grid-template-columns: 1fr; gap: 28px; }
+  .services { padding: 44px 20px; }
+  .solutions { padding: 32px 20px; }
+  .creds { padding: 44px 20px; }
+  .cred-inner { grid-template-columns: 1fr; gap: 28px; }
+  .cta-sec { padding: 52px 20px; }
+  footer { padding: 24px 20px; }
+
+  /* VERTICALS */
+  .vert-inner { grid-template-columns: 1fr; padding: 0 20px !important; }
+  .vert-col { padding: 28px 0 !important; border-left: none !important; border-top: 1px solid rgba(255,255,255,0.05); }
+  .vert-col:first-child { border-top: none; }
+
+  /* INDUSTRIES buyer sections */
+  .buyer-section { padding-top: 28px; margin-bottom: 40px; }
+}
+
+/* ── Small phones (480px) ── */
+@media (max-width: 480px) {
+  h1 { font-size: 24px; }
+  h2 { font-size: 22px; }
+  .content-inner h2 { font-size: 22px; }
+  .cta-inner h2 { font-size: 22px; }
+  .sol-grid { grid-template-columns: 1fr !important; }
+  .stat-grid { grid-template-columns: 1fr 1fr; }
   .hc-stats { grid-template-columns: 1fr; }
-  h1 { font-size: 28px; }
-  .cta-inner h2 { font-size: 28px; }
+  .svc-head { flex-direction: column; align-items: flex-start; gap: 8px; }
 }
