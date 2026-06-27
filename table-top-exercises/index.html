@@ -9,6 +9,38 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../styles.css">
+<style>
+/* ── Industry scenario picker ── */
+.scenario-picker > input[type="radio"] { display: none; }
+.picker-nav {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 28px;
+  gap: 0;
+}
+.picker-nav label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+  padding: 10px 20px 11px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+}
+.picker-nav label:hover { color: var(--text); }
+.picker-panel { display: none; }
+#st-sb:checked ~ .picker-nav label[for="st-sb"],
+#st-hosp:checked ~ .picker-nav label[for="st-hosp"],
+#st-msp:checked ~ .picker-nav label[for="st-msp"],
+#st-other:checked ~ .picker-nav label[for="st-other"] { color: var(--cyan); border-bottom-color: var(--cyan); }
+#st-sb:checked ~ .panel-sb,
+#st-hosp:checked ~ .panel-hosp,
+#st-msp:checked ~ .panel-msp,
+#st-other:checked ~ .panel-other { display: block; }
+</style>
 </head>
 <body>
 
@@ -43,9 +75,12 @@
   <div class="page-hero-glow"></div>
   <div class="page-hero-inner">
     <div class="eyebrow">Tabletop Exercises</div>
-    <h1>Test your incident response plan before something forces you to use it</h1>
-    <p class="page-hero-sub">Most organizations discover the gaps in their incident response plan during an actual incident. A tabletop exercise finds them first  -  in a room, with the right people, under a realistic scenario built for your environment.</p>
-    <a href="../contact/index.html" class="btn-p">Book a tabletop exercise</a>
+    <h1>Test your incident response before something forces you to use it</h1>
+    <p class="page-hero-sub">Scenario-based exercises built on real-world attack patterns from the MITRE ATT&amp;CK framework  -  scored, repeatable, and designed to show measurable improvement over time, not just a one-time gap list.</p>
+    <div class="btn-row">
+      <a href="https://app.usemotion.com/meet/mark-abbott/y85l95p" target="_blank" rel="noopener" class="btn-p">Book a tabletop exercise</a>
+      <a href="../incident-response/index.html" class="btn-g">Incident response services</a>
+    </div>
   </div>
 </section>
 
@@ -57,29 +92,28 @@
         <span class="eyebrow" style="color:var(--cyan)">Why this matters</span>
         <h2>Plans that haven't been tested aren't plans. They're documents.</h2>
         <p>An incident response plan is only as good as the team's ability to execute it under pressure. Communication breakdowns, unclear escalation paths, missing vendor contacts, decisions that look obvious on paper and paralyze people in a real event  -  these are the things tabletop exercises surface.</p>
-        <p>The goal isn't to run a perfect exercise. It's to find the gaps, have the hard conversations in a low-stakes environment, and leave with a clearer picture of what needs to change before something real happens.</p>
-        <a href="../incident-response/index.html" class="btn-p" style="margin-top:8px">See incident response services</a>
+        <p>The goal isn't to run a perfect exercise. It's to find the gaps, have the hard conversations in a low-stakes environment, and leave with a clearer picture of what needs to change  -  and a score that shows where you actually stood.</p>
       </div>
       <div class="cards">
         <div class="card">
           <div class="card-icon">📞</div>
           <div>
             <strong>Communication breakdowns under pressure</strong>
-            <span>Who calls who? When? Who has the authority to make containment decisions at 2am? Most plans assume this is obvious. It rarely is during an active incident.</span>
+            <span>Who calls who? When? Who has authority to make containment decisions at 2am? Most plans assume this is obvious. It rarely is during an active incident.</span>
           </div>
         </div>
         <div class="card">
           <div class="card-icon">⏱</div>
           <div>
             <strong>Decision-making without a script</strong>
-            <span>Real incidents don't follow the scenario you planned for. Exercises build the decision-making muscle  -  so teams can adapt when the actual event looks different.</span>
+            <span>Real incidents don't follow the scenario you planned for. Exercises build the muscle  -  so teams can adapt when the actual event looks different from the inject.</span>
           </div>
         </div>
         <div class="card">
           <div class="card-icon">📋</div>
           <div>
             <strong>Missing contacts and dependencies</strong>
-            <span>Third-party vendors, cyber insurance contacts, legal counsel, regulators  -  the people you need in an incident who aren't in your current runbook.</span>
+            <span>Cyber insurance contacts, legal counsel, regulators, third-party vendors  -  the people you need in an incident who aren't in your current runbook.</span>
           </div>
         </div>
       </div>
@@ -87,14 +121,127 @@
   </div>
 </section>
 
-<!-- SCENARIOS BY VERTICAL -->
+<!-- MITRE ATT&CK METHODOLOGY -->
 <section class="content-sec bg-off">
   <div class="content-inner">
-    <span class="eyebrow" style="color:var(--cyan)">Scenario design</span>
-    <h2>Built for your environment, not a generic template</h2>
-    <div class="two-col" style="margin-top:24px">
+    <div class="two-col">
       <div>
-        <div class="vert-tag" style="margin-bottom:16px">Hotels &amp; Hospitality</div>
+        <span class="eyebrow" style="color:var(--cyan)">Methodology</span>
+        <h2>Grounded in how attacks actually unfold</h2>
+        <p>Scenarios aren't invented. They're built from the MITRE ATT&amp;CK framework  -  a globally recognized knowledge base of adversary tactics and techniques drawn from real-world incidents. Every scenario maps to specific attack stages: how the attacker got in, how they moved laterally, and what the impact looked like.</p>
+        <p>That grounding matters. It means your team is rehearsing responses to techniques that real threat actors use against organizations like yours  -  not hypotheticals someone made up in a boardroom.</p>
+        <p>The scenario is then contextualized to your environment: your vendors, your systems, your team structure, your regulatory obligations. The attack pattern is real. The situation is yours. After the exercise, the After Action Report maps your team's response to the relevant ATT&amp;CK techniques  -  giving technical buyers and auditors a structured view of where the team performed well and where coverage was thin.</p>
+      </div>
+      <div>
+        <p style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:16px">Attack patterns covered</p>
+        <div class="cards">
+          <div class="card">
+            <div class="card-icon">🔐</div>
+            <div>
+              <strong>Ransomware &amp; extortion</strong>
+              <span>Encryption + data exfiltration. Double extortion timelines, backup integrity questions, ransom decision authority.</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-icon">📧</div>
+            <div>
+              <strong>Business Email Compromise</strong>
+              <span>Spear-phishing, identity impersonation, wire fraud. Who has authority to pause a transfer? How do you verify when email is compromised?</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-icon">🔗</div>
+            <div>
+              <strong>Supply chain &amp; third-party compromise</strong>
+              <span>Attack enters through a vendor, integration, or MSP tool. Blast radius, vendor notification obligations, shared ownership of the response.</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-icon">🆔</div>
+            <div>
+              <strong>Credential theft &amp; identity attack</strong>
+              <span>Stolen credentials, MFA bypass, account takeover. Detection gaps, privilege escalation paths, lateral movement through trusted identities.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GAMIFIED / SCORABLE -->
+<section class="content-sec">
+  <div class="content-inner">
+    <span class="eyebrow" style="color:var(--cyan)">Gamified format</span>
+    <h2>Scored, repeatable, and trackable over time</h2>
+    <p style="max-width:680px;margin-bottom:32px">Most tabletop exercises produce a gap list and a thank-you email. This format produces a score  -  and a baseline you can measure against on the next run.</p>
+    <div class="svc-grid" style="margin-top:4px">
+      <div class="svc-card">
+        <div class="svc-icon">🎯</div>
+        <h3>Decision point scoring</h3>
+        <p>Each scenario includes structured decision points where participant responses are scored against a rubric: communication clarity, decision speed, process adherence, regulatory awareness. Not pass/fail  -  a calibrated score that shows where the team is strong and where the gaps are.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">💉</div>
+        <h3>Injects that raise the stakes</h3>
+        <p>Mid-exercise injects introduce curveballs  -  a key person is unavailable, a vendor isn't responding, a second system goes down. These test adaptability, not just plan knowledge. Inject difficulty can be scaled between runs.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">📈</div>
+        <h3>Scores accumulate over time</h3>
+        <p>Each engagement is a fresh scenario  -  different attack type, different injects, calibrated to your current threat environment and maturity. Run quarterly, the scores accumulate into a trend line that shows leadership whether IR capability is actually improving, not just whether the last exercise felt good.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCENARIO EXAMPLES -->
+<section class="content-sec bg-off">
+  <div class="content-inner">
+    <span class="eyebrow" style="color:var(--cyan)">Sample scenarios</span>
+    <h2>What it looks like in your environment</h2>
+    <p style="max-width:680px;margin-bottom:28px">Every scenario is written fresh for the client. These examples show how the same attack patterns play out differently depending on your operating environment.</p>
+
+    <div class="scenario-picker">
+      <input type="radio" id="st-sb" name="st" checked>
+      <input type="radio" id="st-hosp" name="st">
+      <input type="radio" id="st-msp" name="st">
+      <input type="radio" id="st-other" name="st">
+
+      <div class="picker-nav">
+        <label for="st-sb">Small Business</label>
+        <label for="st-hosp">Hospitality &amp; Multi-Site</label>
+        <label for="st-msp">MSP Partners</label>
+        <label for="st-other">Other industries</label>
+      </div>
+
+      <div class="picker-panel panel-sb">
+        <div class="cards">
+          <div class="card">
+            <div class="card-icon">🔐</div>
+            <div>
+              <strong>Ransomware via phishing — files encrypted</strong>
+              <span>An employee clicked a link. Shared drives and M365 are encrypted. Backups haven't been tested. The insurance carrier is asking questions. Who makes the ransom call, and what do you need to answer them?</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-icon">📧</div>
+            <div>
+              <strong>BEC — wire transfer fraud</strong>
+              <span>Someone impersonating the owner emailed the bookkeeper with an urgent wire request. The transfer may have gone out. Who do you call first  -  the bank, your lawyer, or law enforcement  -  and what's the window to reverse it?</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-icon">🔗</div>
+            <div>
+              <strong>Accounting software breach notification</strong>
+              <span>Your cloud accounting provider sends a breach notification. Payroll records and banking details may be exposed. What are your obligations to employees, CRA, and your banking partners  -  and who handles each?</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="picker-panel panel-hosp">
         <div class="cards">
           <div class="card">
             <div class="card-icon">🏨</div>
@@ -119,28 +266,54 @@
           </div>
         </div>
       </div>
-      <div>
-        <div class="vert-tag" style="margin-bottom:16px">MSP Partners</div>
+
+      <div class="picker-panel panel-msp">
         <div class="cards">
           <div class="card">
             <div class="card-icon">🌐</div>
             <div>
-              <strong>Multi-tenant blast radius</strong>
-              <span>A client environment is compromised via your RMM tooling. Other client environments may be affected. How do you isolate, notify, and manage relationships with six simultaneous stakeholders?</span>
+              <strong>Multi-tenant blast radius via RMM</strong>
+              <span>A client environment is compromised through your RMM tooling. Other client environments may be affected. How do you isolate, notify, and manage relationships with six simultaneous stakeholders?</span>
             </div>
           </div>
           <div class="card">
             <div class="card-icon">🛠</div>
             <div>
-              <strong>Compromised via MSP tooling</strong>
-              <span>Your PSA or monitoring tool has a zero-day actively being exploited. You have 47 client environments potentially exposed. Triage, notification, and communication sequence  -  what's the order?</span>
+              <strong>PSA / monitoring tool zero-day</strong>
+              <span>Your monitoring tool has a zero-day actively being exploited. 47 client environments may be exposed. Triage, notification, and communication sequence  -  what's the order, and who leads each stream?</span>
             </div>
           </div>
           <div class="card">
             <div class="card-icon">📧</div>
             <div>
               <strong>BEC targeting a client CFO</strong>
-              <span>A client's CFO has been receiving targeted spear-phishing and may have responded. Wire transfer may be involved. You're managing the technical response and the client relationship simultaneously.</span>
+              <span>A client's CFO responded to a targeted spear-phishing campaign. Wire transfer may be involved. You're managing the technical response and the client relationship at the same time.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="picker-panel panel-other">
+        <div class="cards">
+          <div class="card">
+            <div class="card-icon">🆔</div>
+            <div>
+              <strong>Identity provider compromise — credential theft at scale</strong>
+              <span>An attacker has compromised your identity provider and is moving laterally using stolen credentials. How do you detect it, contain it, and scope the breach when everything looks like a legitimate login?</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-icon">☁️</div>
+            <div>
+              <strong>Cloud misconfiguration — sensitive data exposed</strong>
+              <span>A storage bucket has been publicly accessible. You don't know for how long or who accessed it. Client or employee data may be involved. What are your breach notification obligations and who leads the response?</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-icon">👤</div>
+            <div>
+              <strong>Insider threat — departing employee exfiltration</strong>
+              <span>HR flags unusual activity from an employee who gave notice last week. Large volumes of data moved to a personal cloud drive. What are your legal constraints around investigation, and when can you act?</span>
             </div>
           </div>
         </div>
@@ -168,26 +341,40 @@
       <div class="svc-card">
         <div class="svc-icon">🤝</div>
         <h3>Vendor / third party</h3>
-        <p>Coordinated response when the incident involves external parties  -  PMS vendors, OTA platforms, channel managers, cloud providers. Who has access, who gets notified, who takes ownership of what.</p>
+        <p>Coordinated response when the incident involves external parties. Who has access, who gets notified, who takes ownership  -  tested before a shared incident forces the question.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- DELIVERABLE -->
-<section class="content-sec bg-off">
-  <div class="content-inner" style="max-width:720px;margin:0 auto">
-    <span class="eyebrow" style="color:var(--cyan)">What you get</span>
-    <h2>The After Action Report</h2>
-    <p>Every tabletop exercise closes with an After Action Report  -  a structured summary of what the exercise surfaced: gaps identified, decisions made well, decisions made poorly, and a prioritized list of improvements to the IR plan before the next exercise or actual event.</p>
-    <p>The AAR is a working document, not a trophy. It goes to the people who need to fix things.</p>
-    <ul class="feature-list" style="margin-top:20px">
-      <li>Exercise scenario summary and facilitation notes</li>
-      <li>Gap findings by category (communication, technical, process, regulatory)</li>
-      <li>Prioritized IR plan improvement recommendations</li>
-      <li>Action item list with owners and suggested timelines</li>
-      <li>Internal link to relevant resources and next steps</li>
-    </ul>
+<!-- DELIVERABLES -->
+<section class="content-sec">
+  <div class="content-inner">
+    <div class="two-col">
+      <div>
+        <span class="eyebrow" style="color:var(--cyan)">What you get</span>
+        <h2>A scorecard and an After Action Report</h2>
+        <p>Every exercise closes with two deliverables. The After Action Report documents what the exercise surfaced: gaps, decisions made well, decisions made poorly, and a prioritized improvement list. The Exercise Scorecard captures the scored results by category so leadership has a concrete baseline for the next run.</p>
+        <p>Both are working documents. The AAR goes to the people who need to fix things. The scorecard goes to leadership to show where the investment is moving the needle.</p>
+      </div>
+      <div>
+        <p style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:12px">After Action Report includes</p>
+        <ul class="feature-list">
+          <li>Scenario summary, MITRE ATT&amp;CK technique mapping, and facilitation notes</li>
+          <li>Gap findings by category: communication, technical, process, regulatory</li>
+          <li>Inject response analysis  -  what worked, what broke</li>
+          <li>Prioritized IR plan improvement recommendations</li>
+          <li>Action item list with owners and suggested timelines</li>
+        </ul>
+        <p style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-top:20px;margin-bottom:12px">Exercise Scorecard includes</p>
+        <ul class="feature-list">
+          <li>Five scored dimensions: Detection &amp; Severity Assessment, Decision Authority &amp; Escalation, Containment &amp; Response Actions, Communication, Process &amp; Documentation Adherence</li>
+          <li>1–5 per dimension with facilitator notes; composite score = 0–100 with letter grade (A–F)</li>
+          <li>Quarter-over-quarter trend line across all completed exercises</li>
+          <li>AI Governance variant available with AI-specific scoring dimensions (Governance Awareness, Risk Assessment, Escalation, Stakeholder Communication, Regulatory Alignment)</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 
